@@ -23,7 +23,7 @@ pipeline {
         timeout(time: 1, unit: 'MINUTES')
     }
     tools {
-        'maven'
+        'maven-3.9.7'
     }
     stages {
         stage('First Stage') {
