@@ -31,7 +31,8 @@ pipeline {
             steps {
                 sh "echo one" 
                 sh "env"
-                sh 'mvn --version'
+                sh "mvn clean install"
+                sh "mvn --version"
             }
         }
         stage('Second Stage') {
