@@ -22,11 +22,9 @@ pipeline {
         disableConcurrentBuilds()
         timeout(time: 4, unit: 'MINUTES')
     }
-    tools {
-        maven 'apache-maven-3.9.7' 
-    }
     stages {
-        stage('First Stage') {
+        stage('paralle') {
+            stage('First Stage') {
             steps {
                 sh "echo one" 
                 sh "env"
@@ -51,5 +49,7 @@ pipeline {
                     '''                          
             }
         }
+        }
+        
     }
 }
