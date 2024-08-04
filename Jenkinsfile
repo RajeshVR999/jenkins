@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         ENV_URL = "pipeline.google.com"
+        ACCESS_KEY = credenatil('AWS_ACCESS_KEY')
     }
     stages {
         stage('First Stage') {
@@ -14,6 +15,7 @@ pipeline {
             steps {
                 sh "echo second"
                 sh "echo ENV_URL is ${ENV_URL}"
+                sh "echo $ACCESS_KEY"
             }
         }
         stage('Third Stage') {
