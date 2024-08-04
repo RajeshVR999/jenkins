@@ -6,7 +6,8 @@ pipeline {
     stages {
         stage('First Stage') {
             steps {
-                echo "one"
+                sh echo "one"
+                sh "env" 
             }
         }
         stage('Second Stage') {
@@ -16,6 +17,9 @@ pipeline {
             }
         }
         stage('Third Stage') {
+            environment {
+                ENV_URL = "Stage.google.com"
+            }
             steps {
                 sh'''
                     echo aws
