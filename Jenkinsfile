@@ -22,8 +22,10 @@ pipeline {
         disableConcurrentBuilds()
         timeout(time: 4, unit: 'MINUTES')
     }
+  
     stages {
-        stage('paralle') {
+        stage('parallel') {
+            parallel {
             stage('First Stage') {
             steps {
                 sh "echo one" 
@@ -47,9 +49,8 @@ pipeline {
                     echo devops
                     echo bash
                     '''                          
-            }
+                }
+            } 
         }
-        }
-        
     }
 }
