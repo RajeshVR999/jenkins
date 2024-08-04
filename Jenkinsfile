@@ -22,16 +22,14 @@ pipeline {
         disableConcurrentBuilds()
         timeout(time: 4, unit: 'MINUTES')
     }
-    tools {
-        maven 'maven 3.9.7'
+  //  tools {
+  //      maven 'maven 3.9.7'
     }
     stages {
         stage('First Stage') {
             steps {
                 sh "echo one" 
                 sh "env"
-                sh "mvn clean install"
-                sh "mvn --version"
             }
         }
         stage('Second Stage') {
