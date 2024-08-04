@@ -24,7 +24,6 @@ pipeline {
     }
     tools {
         maven 'Maven 3.9.7'
-        jdk 'jdk8'
     }
     stages {
         stage('First Stage') {
