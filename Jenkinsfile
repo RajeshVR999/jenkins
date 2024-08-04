@@ -11,7 +11,7 @@ pipeline {
 
     //    password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     //}
-    triggers { pollSCM('*/2 * * * *') }
+    triggers { pollSCM('*/1 * * * *') }
     environment {
         ENV_URL = "pipeline.google.com"
         ACCESS_KEY = credentials('AWS_ACCESS_KEY')
