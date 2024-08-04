@@ -20,7 +20,7 @@ pipeline {
     options {
         buildDiscarder(logRotator(numToKeepStr: '3'))
         disableConcurrentBuilds()
-        timeout(time: 1, unit: 'MINUTES')
+        timeout(time: 4, unit: 'MINUTES')
     }
     tools {
         'maven-3.9.7'
