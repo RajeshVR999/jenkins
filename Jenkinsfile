@@ -11,7 +11,7 @@ pipeline {
 
     //    password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     //}
-    triggers { pollSCM('*/1 * * * *') }
+    triggers { pollSCM('*/2 * * * *') }
     environment {
         ENV_URL = "pipeline.google.com"
         ACCESS_KEY = credentials('AWS_ACCESS_KEY')
@@ -23,7 +23,7 @@ pipeline {
         timeout(time: 1, unit: 'MINUTES')
     }
     tools {
-        maven 'maven-3.9.8'
+        'maven'
     }
     stages {
         stage('First Stage') {
