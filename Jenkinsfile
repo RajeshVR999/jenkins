@@ -25,7 +25,7 @@ pipeline {
         stage('First Stage') {
             steps {
                 sh "echo one" 
-                sh "echo env"
+                sh "env"
             }
         }
         stage('Second Stage') {
