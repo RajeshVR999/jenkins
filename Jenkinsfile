@@ -22,11 +22,18 @@ pipeline {
         disableConcurrentBuilds()
         timeout(time: 1, unit: 'MINUTES')
     }
+    tools {
+
+    }
+    tools {
+        maven 'maven-3.9.8'
+    }
     stages {
         stage('First Stage') {
             steps {
                 sh "echo one" 
                 sh "env"
+                sh 'mvn --version'
             }
         }
         stage('Second Stage') {
