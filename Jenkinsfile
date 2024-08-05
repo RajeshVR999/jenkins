@@ -25,7 +25,7 @@ pipeline {
   
     stages {
         stage('parallel') {
-            parallel {
+          parallel {
             stage('First Stage') {
             steps {
                 sh "echo one" 
@@ -53,4 +53,5 @@ pipeline {
             } 
         }
     }
-    }}
+  }
+}
